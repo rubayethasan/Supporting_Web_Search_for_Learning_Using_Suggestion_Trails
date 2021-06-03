@@ -1,0 +1,99 @@
+.sug-filter {
+    background: #ddddff;
+    padding: 5px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.sug-single {
+    background: lightgrey;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.sug-single div{
+    margin-bottom: 1px;
+    padding: 5px;
+}
+
+.sug-subject{
+    font-size: large;
+    font-weight: 800;
+
+}
+.sug-header{
+    font-size: medium;
+    font-weight: 600;
+    background-color: whitesmoke;
+
+}
+
+.sug-header span{
+    margin:25px;
+}
+
+.sug-body{
+    background-color: white;
+
+}
+.sug-footer{
+    font-size: medium;
+    font-weight: 600;
+    background-color: powderblue;
+    text-align: center;
+
+}
+.sug-footer > span{
+    margin:10px;
+
+}
+.thumbs-up-image img{
+    width: 15px;
+    height: 15px;
+}
+
+.thumbs-down-image img{
+    width: 15px;
+    height: 15px;
+}
+
+.blink{
+    color: rgb(0, 137, 226);
+    animation: blink 2s infinite;
+}
+
+@keyframes blink{
+    0%{opacity: 1;}
+    75%{opacity: 1;}
+    76%{ opacity: 0;}
+    100%{opacity: 0;}
+}
+
+.form-single {
+    background: #b8cfd8;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.form-body{
+    background-color: #f9f9f9;
+    padding: 5px;
+
+}
+
+.enable_img{
+    cursor: pointer;
+}
+
+.disable_img{
+    opacity:0.2;
+    cursor: not-allowed;
+}
+
+.topic-header{
+    text-align: center;
+}
+
+.suggestion-feed-header{
+    background-color: #f5f5f5;
+}
