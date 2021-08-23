@@ -1,5 +1,7 @@
-# Supporting Web Search for Learning Using Suggestion Trails. <br>
-## Developing a web search platform and investigating user's search behaviour and knowledge gain during topic searching for supporting new users with prior user's suggestions.
+# Title
+Supporting Web Search for Learning Using Suggestion Trails. <br>
+## Goal
+Developingawebsearchplatformandinvestigatinguser’ssearchbeha-viourandknowledgegainduringtopicsearchingforsupportingnewuserswithprioruser’ssuggestions.
 
 ## Abstract
 Web search is frequently used to satisfy information need about learning-related objectives. One of the most important outcomes of a web search session is knowledge gain. It can be influenced by user’s search behaviour, which includes user’s idleness, search time, task completion rate, user queries, visited SERPs, tendency to follow other people’s suggestions etc. However, it will be effective to find a suitable way to minimize search time, query number and SERPs number in a web search session without compromising the knowledge gain. In that case, following the suggestions and evaluation of previous users would be an efficient way. 
