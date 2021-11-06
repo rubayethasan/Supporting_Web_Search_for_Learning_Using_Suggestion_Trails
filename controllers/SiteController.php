@@ -63,7 +63,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         //Generic::generateCompletionCode(); die();
-        Generic::checkUt();
+        //Generic::checkUt();
         return $this->render('index');
     }
 

@@ -30,7 +30,7 @@ use yii\di\Instance;
  * {
  *     return [
  *         [
- *             'class' => CacheableWidgetBehavior::className(),
+ *             'class' => CacheableWidgetBehavior::class,
  *             'cacheDuration' => 0,
  *             'cacheDependency' => [
  *                 'class' => 'yii\caching\DbDependency',
@@ -40,8 +40,6 @@ use yii\di\Instance;
  *     ];
  * }
  * ```
- *
- * @property Widget $owner
  *
  * @author Nikolay Oleynikov <oleynikovny@mail.ru>
  * @since 2.0.14

@@ -99,7 +99,7 @@ class HTMLPurifier_URI
     }
 
     /**
-     * Components validation method applicable for all schemes. May modify
+     * Generic validation method applicable for all schemes. May modify
      * this URI in order to get it into a compliant form.
      * @param HTMLPurifier_Config $config
      * @param HTMLPurifier_Context $context

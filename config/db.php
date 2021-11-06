@@ -1,7 +1,7 @@
 <?php
 
 //for production
-return [
+/*return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=sswst',
     'username' => 'rubayet',
@@ -12,9 +12,9 @@ return [
     'enableSchemaCache' => true,
     'schemaCacheDuration' => 60,
     'schemaCache' => 'cache',
-];
+];*/
 
-/*
+
 return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=sswst',
@@ -22,4 +22,3 @@ return [
     'password' => 'root',
     'charset' => 'utf8',
 ];
-*/

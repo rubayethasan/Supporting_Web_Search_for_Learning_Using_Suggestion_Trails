@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Components schema interchange format that can be converted to a runtime
+ * Generic schema interchange format that can be converted to a runtime
  * representation (HTMLPurifier_ConfigSchema) or HTML documentation. Members
  * are completely validated.
  */

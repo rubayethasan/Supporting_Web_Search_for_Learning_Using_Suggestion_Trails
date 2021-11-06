@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Components property list implementation
+ * Generic property list implementation
  */
 class HTMLPurifier_PropertyList
 {

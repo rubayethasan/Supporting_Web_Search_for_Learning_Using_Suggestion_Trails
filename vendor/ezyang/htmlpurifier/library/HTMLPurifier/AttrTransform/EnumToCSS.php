@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Components pre-transform that converts an attribute with a fixed number of
+ * Generic pre-transform that converts an attribute with a fixed number of
  * values (enumerated) to CSS.
  */
 class HTMLPurifier_AttrTransform_EnumToCSS extends HTMLPurifier_AttrTransform

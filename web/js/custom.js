@@ -15,7 +15,7 @@ var page_active_time = 0;
 var window_enter_moment;
 var check_guest=document.getElementById('check-guest').value;
 var search_result_number = 50;
-var search_time = 5; // min
+var search_time = 1; // min
 var suggestion_rate_count = 0;
 var suggestion_rate_count_max = 5;
 

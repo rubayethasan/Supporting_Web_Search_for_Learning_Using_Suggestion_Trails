@@ -70,6 +70,10 @@ class QueryBuilder extends \yii\db\QueryBuilder
         if (empty($uniqueNames)) {
             return $this->insert($table, $insertColumns, $params);
         }
+        if ($updateNames === []) {
+            // there are no columns to update
+            $updateColumns = false;
+        }
 
         $onCondition = ['or'];
         $quotedTableName = $this->db->quoteTableName($table);
@@ -85,7 +89,7 @@ class QueryBuilder extends \yii\db\QueryBuilder
         list(, $placeholders, $values, $params) = $this->prepareInsertValues($table, $insertColumns, $params);
         $mergeSql = 'MERGE INTO ' . $this->db->quoteTableName($table) . ' '
             . 'USING (' . (!empty($placeholders) ? 'VALUES (' . implode(', ', $placeholders) . ')' : ltrim($values, ' ')) . ') AS "EXCLUDED" (' . implode(', ', $insertNames) . ') '
-            . 'ON ' . $on;
+            . "ON ($on)";
         $insertValues = [];
         foreach ($insertNames as $name) {
             $quotedName = $this->db->quoteColumnName($name);

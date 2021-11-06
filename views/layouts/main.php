@@ -78,7 +78,7 @@ $topic_id = rand(1,10);
 
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
-        'brandUrl' => "#",
+        'brandUrl' => Yii::$app->request->baseUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],

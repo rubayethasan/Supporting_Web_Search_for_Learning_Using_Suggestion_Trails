@@ -93,7 +93,8 @@ use yii\helpers\StringHelper;
  *
  * For more details and usage information on Component, see the [guide article on components](guide:concept-components).
  *
- * @property Behavior[] $behaviors List of behaviors attached to this component. This property is read-only.
+ * @property-read Behavior[] $behaviors List of behaviors attached to this component. This property is
+ * read-only.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
@@ -222,7 +223,7 @@ class Component extends BaseObject
      * will be implicitly called when executing `isset($component->property)`.
      * @param string $name the property name or the event name
      * @return bool whether the named property is set
-     * @see http://php.net/manual/en/function.isset.php
+     * @see https://secure.php.net/manual/en/function.isset.php
      */
     public function __isset($name)
     {
@@ -254,7 +255,7 @@ class Component extends BaseObject
      * will be implicitly called when executing `unset($component->property)`.
      * @param string $name the property name
      * @throws InvalidCallException if the property is read only.
-     * @see http://php.net/manual/en/function.unset.php
+     * @see https://secure.php.net/manual/en/function.unset.php
      */
     public function __unset($name)
     {
@@ -556,9 +557,9 @@ class Component extends BaseObject
             return true;
         }
 
+        $removed = false;
         // plain event names
         if (isset($this->_events[$name])) {
-            $removed = false;
             foreach ($this->_events[$name] as $i => $event) {
                 if ($event[0] === $handler) {
                     unset($this->_events[$name][$i]);
@@ -567,23 +568,24 @@ class Component extends BaseObject
             }
             if ($removed) {
                 $this->_events[$name] = array_values($this->_events[$name]);
-                return $removed;
+                return true;
             }
         }
 
         // wildcard event names
-        $removed = false;
-        foreach ($this->_eventWildcards[$name] as $i => $event) {
-            if ($event[0] === $handler) {
-                unset($this->_eventWildcards[$name][$i]);
-                $removed = true;
+        if (isset($this->_eventWildcards[$name])) {
+            foreach ($this->_eventWildcards[$name] as $i => $event) {
+                if ($event[0] === $handler) {
+                    unset($this->_eventWildcards[$name][$i]);
+                    $removed = true;
+                }
             }
-        }
-        if ($removed) {
-            $this->_eventWildcards[$name] = array_values($this->_eventWildcards[$name]);
-            // remove empty wildcards to save future redundant regex checks:
-            if (empty($this->_eventWildcards[$name])) {
-                unset($this->_eventWildcards[$name]);
+            if ($removed) {
+                $this->_eventWildcards[$name] = array_values($this->_eventWildcards[$name]);
+                // remove empty wildcards to save future redundant regex checks:
+                if (empty($this->_eventWildcards[$name])) {
+                    unset($this->_eventWildcards[$name]);
+                }
             }
         }
 

@@ -64,7 +64,7 @@ if(Yii::$app->params['phase'] == 2){
                 <li style="color: red">Please see previous users suggestions and experience during their search on the same topic. This may help to improve your search experience. You can do that by clicking the buttons on top of this page.</li>
                 <li style="color: red">For searching use only the search box below. Click on relevant web page links that appear in the search results to learning about the topic.</li>
                 <li>When you feel that you have acquired sufficient knowledge, you can proceed to take a final test on the topic of <?=$current_topic_subject?>.</li>
-                <li>Note that it is mandatory to search and learn about the topic for at least 5 minutes, after that you can proceed to final test.</li>
+                <li>Note that it is mandatory to search and learn about the topic for at least 1 minute, after that you can proceed to final test.</li>
                 <li>We however, encourage you to spend more time to search. The final test will take the average person no more than 2-5 minutes to complete successfully.</li>
                 <li>Once you begin the test, you will not be allowed to search the web for answers due to time limits for each question. </li>
             </ul>
